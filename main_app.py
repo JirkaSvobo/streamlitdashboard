@@ -18,6 +18,7 @@ query_morning = """SELECT
                 WHERE hour(started_at) BETWEEN 6 AND 9
                 LIMIT 100000
                 """
+
 query_afternoon = """SELECT
                       start_station_latitude as lat,
                       start_station_longitude as lon
@@ -26,6 +27,7 @@ query_afternoon = """SELECT
                   BETWEEN 15 AND 19
                   LIMIT 100000
 """
+
 df_bikes_morning = pd.read_sql(sql=query_morning, con=engine)
 df_bikes_afternoon = pd.read_sql(sql=query_afternoon, con=engine)
 
