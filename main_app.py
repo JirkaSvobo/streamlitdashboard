@@ -18,6 +18,7 @@ query_morning = """SELECT
              WHERE hour(started_at) BETWEEN 6 AND 9
              LIMIT 100000
  """
+ 
  query_afternoon = """SELECT
               start_station_latitude as lat,
               start_station_longitude as lon
