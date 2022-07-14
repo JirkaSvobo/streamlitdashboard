@@ -11,14 +11,14 @@ import plotly.express as px
 # data
 ##########
 engine = create_engine("mysql+pymysql://data-student:u9AB6hWGsNkNcRDm@data.engeto.com:3306/data_academy_04_2022")
-query_morning = """select
+query_morning = """SELECT
              start_station_latitude as lat,
              start_station_longitude as lon
              FROM edinburgh_bikes
              WHERE hour(started_at) BETWEEN 6 AND 9
              LIMIT 100000
  """
- query_afternoon = """select
+ query_afternoon = """SELECT
               start_station_latitude as lat,
               start_station_longitude as lon
               FROM edinburgh_bikes
