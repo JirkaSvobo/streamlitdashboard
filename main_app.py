@@ -41,7 +41,7 @@ if page == 'Mapa':
     col1.map(df_bikes_morning)
 
     from_hour_afternoon = col2.slider('Vecer od', min_value=12, max_value = 23, value=15)
-    to_hour_afternoon = col2.slider('Vecer do', min_value=12, max_value = 23, value=99)
+    to_hour_afternoon = col2.slider('Vecer do', min_value=12, max_value = 23, value=19)
     col2.write('Pocatecni stanice vecer mezi {} - {}'. format(from_hour_afternoon,to_hour_afternoon))
     query_afternoon = """SELECT
                               start_station_latitude as lat,
