@@ -17,7 +17,7 @@ query = """select
              FROM edinburgh_bikes
              LIMIT 20000
  """
-df_bikes = pd.read_sql(sql=query', con=engine)
+df_bikes = pd.read_sql(sql=query, con=engine)
 
 ##########
 # vizualizace
